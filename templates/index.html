@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+ 
+
     <title>AGNAEY Portfolio</title>
     <style>
 
@@ -410,6 +413,8 @@
         <div id="home" class="main-container mb-5">
             <div class="home-img" data-aos="zoom-out" data-aos-duration="3000">
                 <img id="img1" src="/portfolio/static/images/oksss.jpg" alt="">
+                <!-- <img src="{{ url_for('static', filename='/images/oksss.jpg') }}" alt="Example Image"> -->
+
             </div>
             <div class="content">
                 <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>AGNAEY</span></h1>
@@ -427,7 +432,7 @@
                             class="fa-brands fa-twitter"></i></a>
                 </div>
                 <div class=" mt-5 mb-5" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
-                    <a id="button" href="#aboutme">About me</a>
+                    <a  id="button" href="#aboutme">About me</a>
                 </div>
             </div>
         </div>
@@ -582,7 +587,7 @@
                 <h1 id="about" class="text-center mb-4" data-aos="zoom-in" data-aos-duration="1500"><i class="fa-solid fa-headset"></i>&nbsp;&nbsp;Contact Me</h1>
                 <section id="contact" style="background-color: #000; color: #fff; padding: 50px 0;">
                     <div class="container">
-                        <form action="#" method="POST" style="max-width: 600px; margin: 0 auto;" data-aos="fade-up" data-aos-duration="1500">
+                        <form action="/send_mail"  id="contactForm" method="POST" style="max-width: 600px; margin: 0 auto;" data-aos="fade-up" data-aos-duration="1500">
                             <div class="mb-3">
                                 <label for="name" class="form-label" style="color: #fff;">Name</label>
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" style="background-color: #222; color: #fff; border: 1px solid #077b32;" required>
@@ -656,6 +661,7 @@
         window.onload = typeWriter
     </script>
 
+   
 </body>
 
 </html>
