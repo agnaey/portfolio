@@ -12,147 +12,233 @@
  
 
     <title>AGNAEY Portfolio</title>
-    <style>
-
-        * {
-            padding: 0;
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            box-sizing: border-box;
-        }
-
-        body {
-            width: 100%;
-            overflow-x: hidden;
-            background-color: black;
-        }
-
-        nav {
-            width: 100%;
-            height: 10vh;
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background-color: inherit;
-        }
-
-        .nav-container {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .logo {
-            color: white;
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        .logo span {
-            color: #077b32;
-            text-shadow: 0 0 10px #077b32;
-        }
-
-        .hamburg,
-        .cancel {
-            cursor: pointer;
-            position: absolute;
-            right: 15px;
-            top: 10px;
-            color: white;
-            display: none;
-            font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
-        }
-
-        .nav-container .links {
-            display: flex;
-        }
-
-        .nav-container .links a {
-            position: relative;
-            font-size: 1.2rem;
-            color: white;
-            margin: 0 20px;
-            text-decoration: none;
-            font-weight: 550;
-            transition: 0.3s linear;
-        }
-
-        .nav-container .links a::before {
-            position: absolute;
-            content: "";
-            bottom: -3px;
-            left: 0;
-            width: 0%;
-            height: 3px;
-            background-color: #077b32;
-            transition: 0.2s linear;
-        }
-
-        .nav-container .links a:hover::before {
-            width: 100%;
-        }
-
-        .nav-container .links a:hover {
-            color: #077b32;
-        }
-
-        .dropdown {
-            z-index: 100;
-            position: absolute;
-            top: 0;
-            transform: translateY(-500px);
-            width: 100%;
-            height: auto;
-            backdrop-filter: blur(4px) brightness(40%);
-            box-shadow: 0 0 20px black;
-            transition: 0.2s linear;
-        }
-
-        .dropdown .links a {
-            display: flex;
-            color: white;
-            text-decoration: none;
-            justify-content: center;
-            padding: 15px 0;
-            align-items: center;
-            transition: 0.2s linear;
-        }
-
-        .dropdown .links a:hover {
-            background-color: #077b32;
-        }
-
-        section {
-            width: 100%;
-            height: 90vh;
-        }
-
-        .main-container {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-
-        .main-container .image {
-            width: 500px;
-            height: 80vh;
-            border-radius: 100%;
-            overflow: hidden;
-            box-shadow: 0 0 50px #077b32;
-        }
-
-        .home-img {
-            box-shadow: 0 0 80px #077b32;
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        box-sizing: border-box;
+    }
+    
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        background: linear-gradient(135deg, #141e30, #243b55);
+        color: #f5f5f5;
+    }
+    
+    nav {
+        width: 100%;
+        height: 10vh;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(20, 30, 48, 0.8);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+    }
+    
+    .nav-container {
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        color: #00d4ff;
+        font-size: 2rem;
+        font-weight: bold;
+        text-shadow: 0 0 10px #00d4ff;
+    }
+    
+    .logo span {
+        color: #ff007a;
+        text-shadow: 0 0 10px #ff007a;
+    }
+    
+    .hamburg,
+    .cancel {
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        color: white;
+        display: none;
+        font-size: 2.5rem;
+    }
+    
+    .nav-container .links {
+        display: flex;
+        gap: 30px;
+    }
+    
+    .nav-container .links a {
+        position: relative;
+        font-size: 1.2rem;
+        color: #f5f5f5;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+    
+    .nav-container .links a::before {
+        position: absolute;
+        content: "";
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #00d4ff, #ff007a);
+        transition: width 0.3s ease;
+    }
+    
+    .nav-container .links a:hover::before {
+        width: 100%;
+    }
+    
+    .nav-container .links a:hover {
+        color: #ff007a;
+    }
+    
+    section {
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #243b55, #141e30);
+    }
+    
+    .main-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .main-container .image {
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 0 40px rgba(0, 212, 255, 0.5);
+    }
+    
+    .main-container .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .main-container .image:hover img {
+        transform: scale(1.1);
+    }
+    
+    .main-container .content {
+        width: 50%;
+    }
+    
+    .content h1 {
+        font-size: 3rem;
+        color: #00d4ff;
+        text-shadow: 0 0 10px #00d4ff;
+    }
+    
+    .content h1 span {
+        color: #ff007a;
+        text-shadow: 0 0 10px #ff007a;
+    }
+    
+    .content .typewriter {
+        font-size: 2rem;
+        margin-top: 20px;
+        color: #ff007a;
+        text-shadow: 0 0 10px #ff007a;
+    }
+    
+    .content p {
+        font-size: 1.2rem;
+        margin: 20px 0;
+        line-height: 1.6;
+        color: #f5f5f5;
+    }
+    
+    .social-links {
+        display: flex;
+        gap: 15px;
+    }
+    
+    .social-links i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        background: transparent;
+        border: 2px solid #00d4ff;
+        border-radius: 50%;
+        color: #00d4ff;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+    }
+    
+    .social-links i:hover {
+        background: linear-gradient(135deg, #00d4ff, #ff007a);
+        color: #fff;
+        transform: scale(1.2);
+    }
+    
+    button, #button {
+        padding: 15px 50px;
+        background: linear-gradient(135deg, #00d4ff, #ff007a);
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    button:hover, #button:hover {
+        background: #fff;
+        color: #ff007a;
+        box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
+        transform: scale(1.1);
+    }
+    .home-img {
+            animation: spin-shadow 4s linear infinite;
 
             border-radius: 50%;
         }
+        @keyframes spin-shadow {
+    0% {
+        box-shadow: 0 0 15px #00d4ff, 0 0 30px #ff007a, 0 0 50px #00d4ff, 0 0 80px #ff007a;
+    }
+    25% {
+        box-shadow: 0 0 15px #ff007a, 0 0 30px #00d4ff, 0 0 50px #ff007a, 0 0 80px #00d4ff;
+    }
+    50% {
+        box-shadow: 0 0 15px #00d4ff, 0 0 30px #ff007a, 0 0 50px #00d4ff, 0 0 80px #ff007a;
+    }
+    75% {
+        box-shadow: 0 0 15px #ff007a, 0 0 30px #00d4ff, 0 0 50px #ff007a, 0 0 80px #00d4ff;
+    }
+    100% {
+        box-shadow: 0 0 15px #00d4ff, 0 0 30px #ff007a, 0 0 50px #00d4ff, 0 0 80px #ff007a;
+    }
+}
 
+
+
+a{
+    text-decoration: none;
+}
         .home-img img {
             position: relative;
             width: 32vw;
@@ -166,224 +252,57 @@
             width: 100%;
         }
 
-        .main-container .image:hover {
-            animation: animate 1.5s ease-in-out infinite;
-        }
-
-        @keyframes animate {
-            0% {
-                scale: 1;
-            }
-
-            50% {
-                scale: 1.05;
-            }
-
-            100% {
-                scale: 1;
-            }
-        }
-
-        .main-container .content {
-            color: white;
-            width: 40%;
-            min-height: 100px;
-        }
-
-        .content h1 {
-            font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
-        }
-
-        .content h1 span {
-            color: #077b32;
-            text-shadow: 0 0 10px #077b32;
-        }
-
-        .content .typewriter {
-            font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
-            margin-top: 20px;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .content .typewriter-text {
-            margin-top: 20px;
-            color: #077b32;
-            text-shadow: 0 0 10px #077b32;
-        }
-
-        .content p {
-            font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
-            margin: 10px 0;
-        }
-
-        .social-links i {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 3rem;
-            height: 3rem;
-            background-color: transparent;
-            border: 0.2rem solid #077b32;
-            border-radius: 50%;
-            color: #077b32;
-            margin: 5px 15px;
-            font-size: 1.5rem;
-            transition: 0.2s linear;
-        }
-
-        .social-links i:hover {
-            scale: 1.3;
-            color: black;
-            background-color: #077b32;
-            filter: drop-shadow(0 0 10px #077b32);
-        }
-
-        #button {
-            text-decoration: none;
-            padding: 20px 70px;
-            margin-top: 30px;
-            margin: 30px;
-            background-color: #077b32;
-            color: white;
-            border: none;
-            outline: none;
-            font-size: 120%;
-            font-weight: 700;
-            border-radius: 5px;
-            transition: 0.2s linear;
-        }
-
-        #button:hover {
-            scale: 1.1;
-            color: #077b32;
-            border: 2px solid #077b32;
-            background-color: transparent;
-            font-weight: 700;
-            box-shadow: 0 0 40px #077b32;
-        }
-
-        button {
-            text-decoration: none;
-            padding: 20px 70px;
-            margin-top: 30px;
-            margin: 30px;
-            background-color: #077b32;
-            color: white;
-            border: none;
-            outline: none;
-            font-size: 120%;
-            font-weight: 700;
-            border-radius: 5px;
-            transition: 0.2s linear;
-        }
-
-        button:hover {
-            scale: 1.1;
-            color: #077b32;
-            border: 2px solid #077b32;
-            background-color: transparent;
-            font-weight: 700;
-            box-shadow: 0 0 40px #077b32;
-        }
-        /* #button {
-            text-decoration: none;
-            color: white;
-        }
-
-        #button:hover {
-            color: #077b32;
-        } */
-
-        #about {
-            color: white;
-            font-size: 2rem;
-            font-weight: bold;
-        }
-        .item{
-            margin-top: 50px;
-        }
-
-        .det{
-            color: #077b32;
-            font-size: 20px;
-        }
         .bar{
-            width: 100%;
+            width: 300px;
             height: 20px;
             background-color: #f1f1f1;
             border-radius: 5px;
             margin: 10px 0;
         }
         .bar1{
-            width: 0%;
+            width: 100%;
             height: 100%;
-            background-color: #077b32;
+            background-color: #00d4ff;
             border-radius: 5px;
         }
-        #text{
-            color: white;
-            font-family: 18px;
+
+
+    
+    @media (max-width: 884px) {
+        .nav-container .links {
+            display: none;
         }
-        #num{
-            color: white;
-            font-family: 23px;
+    
+        .hamburg,
+        .cancel {
+            display: block;
         }
-
-        @media (max-width:884px) {
-            nav .logo {
-                position: absolute;
-                top: 16px;
-                left: 15px;
-                font-size: 1.5rem;
-            }
-
-            .main-container {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .nav-container .links {
-                display: none;
-            }
-
-            .hamburg,
-            .cancel {
-                display: block;
-            }
-
-            .main-container .content {
-                width: 80%;
-            }
-
-            .social-links i {
-                width: 2.5rem;
-                height: 2.5rem;
-                font-size: 1.5rem;
-            }
-
-            .main-container .image {
-                z-index: -1;
-                width: 50%;
-                height: 60%;
-            }
+    
+        .main-container {
+            flex-direction: column;
+            text-align: center;
         }
-
-        @media (max-width:440px) {
-            .main-container .image {
-                width: 50%;
-                height: 60%;
-                margin-bottom: 0px;
-            }
-
-            .main-container .content {
-                width: 80%;
-            }
-
-            .main-container button {
-                margin-top: 15px;
-            }
+    
+        .main-container .content {
+            width: 90%;
         }
+    
+        .main-container .image {
+            width: 300px;
+            height: 300px;
+        }
+    }
+    
+    @media (max-width: 440px) {
+        .main-container .content {
+            width: 100%;
+        }
+    
+        .main-container button {
+            padding: 10px 40px;
+            font-size: 1rem;
+        }
+    }
     </style>
 </head>
 
@@ -403,6 +322,8 @@
                         href="#skill">Skills</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a
                         href="#education">Education</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a
+                        href="#projects">Projects</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a
                         href="#contact">Contact</a></div>
             </div>
@@ -450,12 +371,12 @@
                             computer science principles. I specialize in creating dynamic, user-friendly websites and robust 
                             web solutions tailored to meet specific client needs.</p>
 
-                        <p class="text-white" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="300"> With a deep understanding of both frontend and backend development, I aim to deliver
+                        <p class="text-white" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300"> With a deep understanding of both frontend and backend development, I aim to deliver
                             seamless user experiences while ensuring performance and scalability. Whether it's designing
                             intuitive interfaces or crafting efficient server-side logic, I take pride in writing clean
                             and maintainable code.</p>
 
-                        <p class="text-white" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="300">Beyond technical work, I enjoy learning about emerging technologies and constantly improving
+                        <p class="text-white" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">Beyond technical work, I enjoy learning about emerging technologies and constantly improving
                             my skills to stay ahead in this fast-paced industry. I’m driven by a desire to build
                             innovative solutions that make a difference.</p>
 
@@ -470,7 +391,7 @@
                         
                     <div class="row">
                         <div class="col-lg-6">
-                            <div class="item"  data-aos="fade-right" data-aos-duration="1500" data-aos-delay="300">
+                            <div class="item"  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
                                 <div class="det">
                                     <span>HTML</span>
                                     <i>100%</i>
@@ -479,7 +400,7 @@
                                     <div class="bar1" style="width: 100%;"></div>
                                 </div>
                             </div>
-                            <div class="item"  data-aos="fade-right" data-aos-duration="1500" data-aos-delay="300">
+                            <div class="item"  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
                                 <div class="det">
                                     <span>CSS</span>
                                     <i>90%</i>
@@ -488,7 +409,7 @@
                                     <div class="bar1" style="width: 90%;"></div>
                                 </div>
                             </div>
-                            <div class="item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="300">
+                            <div class="item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
                                 <div class="det">
                                     <span>DJango</span>
                                     <i>75%</i>
@@ -498,7 +419,7 @@
                                 </div>
                             </div>
 
-                            <div class="item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="300">
+                            <div class="item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
                                 <div class="det">
                                     <span>Flask</span>
                                     <i>70%</i>
@@ -512,7 +433,7 @@
 
                         </div>
                         <div class="col-lg-6">
-                            <div class="item" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="300">
+                            <div class="item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
                                 <div class="det">
                                     <span>Python</span>
                                     <i>70%</i>
@@ -521,7 +442,7 @@
                                     <div class="bar1" style="width: 70%;"></div>
                                 </div>
                             </div>
-                            <div class="item" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="300">
+                            <div class="item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
                                 <div class="det">
                                     <span>Bootstrap</span>
                                     <i>90%</i>
@@ -530,7 +451,7 @@
                                     <div class="bar1" style="width: 90%;"></div>
                                 </div>
                             </div>
-                            <div class="item" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="300">
+                            <div class="item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
                                 <div class="det">
                                     <span>SQLite</span>
                                     <i>85%</i>
@@ -539,7 +460,7 @@
                                     <div class="bar1" style="width: 85%;"></div>
                                 </div>
                             </div>
-                            <div class="item" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="300">
+                            <div class="item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
                                 <div class="det">
                                     <span>React</span>
                                     <i>60%</i>
@@ -558,56 +479,93 @@
         <section>
             <div id="education" class="container">
             <h1 id="about" class="text-center mb-4" data-aos="zoom-in" data-aos-duration="1500"><i class="fa-solid fa-user-graduate"></i>&nbsp;&nbsp;Education</h1>
-            <div style="background-color: #077b32;" class="card mb-3" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">
-                <div class="card-body">
-                  <h2 id="about" class="card-title">PYTHON FULL-STACK</h2>
-                  <h5 id="text" class="card-text"> SYNNEFO SOLUTIONS Kochi</h5>
-                  <h3 id="num">2024-2025</h3>
-                </div>
-            </div>
-            <div style="background-color: #077b32;" class="card mb-3" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">
-                <div class="card-body">
-                  <h2 id="about" class="card-title">BCA</h2>
-                  <h5 id="text" class="card-text">IHRD Nadapuram</h5>
-                  <h3 id="num">2021-2024</h3>
-                </div>
-            </div>
-            <div style="background-color: #077b32;" class="card mb-3" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">
-                <div class="card-body">
-                    <h2 id="about" class="card-title">Computer Science</h2>
-                    <h5 id="text" class="card-text">PRMKHSS Kolavalloor</h5>
-                    <h3 id="num">2019-2021</h3>
-                </div>
-            </div>
+            <div style="background: linear-gradient(90deg, #00d4ff, #ff007a); border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" 
+            class="card mb-3" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">
+           <div class="card-body text-white text-center">
+               <h2 id="about" class="card-title">PYTHON FULL-STACK</h2>
+               <h5 id="text" class="card-text">SYNNEFO SOLUTIONS Kochi</h5>
+               <h3 id="num">2024-2025</h3>
+           </div>
+       </div>
+       
+       <div style="background: linear-gradient(90deg, #00d4ff, #ff007a); border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" 
+            class="card mb-3" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">
+           <div class="card-body text-white text-center">
+               <h2 id="about" class="card-title">BCA</h2>
+               <h5 id="text" class="card-text">IHRD Nadapuram</h5>
+               <h3 id="num">2021-2024</h3>
+           </div>
+       </div>
+       
+       <div style="background: linear-gradient(90deg, #00d4ff, #ff007a); border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" 
+            class="card mb-3" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">
+           <div class="card-body text-white text-center">
+               <h2 id="about" class="card-title">Computer Science</h2>
+               <h5 id="text" class="card-text">PRMKHSS Kolavalloor</h5>
+               <h3 id="num">2019-2021</h3>
+           </div>
+       </div>
+       
         </div>
         </section>
+        <section id="projects" class="mt-5">
+            <div class="container" id="projects">
+                <h1 id="about"  class="mb-5 mt-3 text-center" data-aos="zoom-in" data-aos-duration="1500">
+                    <i class="fa-solid fa-briefcase"></i>&nbsp;&nbsp;Projects
+                </h1>
+                <!-- <div class="row">
 
-        <section>
-            <div id="contact" class="container">
-                <h1 id="about" class="text-center mb-4" data-aos="zoom-in" data-aos-duration="1500"><i class="fa-solid fa-headset"></i>&nbsp;&nbsp;Contact Me</h1>
-                <section id="contact" style="background-color: #000; color: #fff; padding: 50px 0;">
-                    <div class="container">
-                        <form action="/send_mail"  id="contactForm" method="POST" style="max-width: 600px; margin: 0 auto;" data-aos="fade-up" data-aos-duration="1500">
-                            <div class="mb-3">
-                                <label for="name" class="form-label" style="color: #fff;">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" style="background-color: #222; color: #fff; border: 1px solid #077b32;" required>
+                    <div class="col-md-4 mb-4">
+                        <div class="project-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                            <img src="https://via.placeholder.com/350x200" alt="Project 1" class="project-image">
+                            <div class="project-content">
+                                <h3 class="project-title">Project 1</h3>
+                                <p class="project-description">A short description of Project 1, showcasing its features and technology stack.</p>
+                                <a href="#" class="project-link" target="_blank">View Project</a>
                             </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label" style="color: #fff;">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" style="background-color: #222; color: #fff; border: 1px solid #077b32;" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label" style="color: #fff;">Message</label>
-                                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" style="background-color: #222; color: #fff; border: 1px solid #077b32;" required></textarea>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" id="button" class="btn" style=" padding: 10px 20px;  cursor: pointer;">
-                                    Submit
-                                </button>
-                            </div>
-                        </form>
+                        </div>
+                    </div> -->
+            </div>
+        </section>
+        
+
+        <section id="contact" style="background-color: #000; color: #fff; padding: 50px 0;">
+            <div class="container">
+                <h1 id="about" class="text-center mb-5" data-aos="zoom-in" data-aos-duration="1500">
+                    <i class="fa-solid fa-headset"></i>&nbsp;&nbsp;Contact Me
+                </h1>
+        
+                <!-- Contact Form -->
+                <form action="/send_mail" id="contactForm" method="POST" style="max-width: 600px; margin: 0 auto;" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="mb-3">
+                        <label for="name" class="form-label" style="color: #fff;">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" 
+                            style="background: linear-gradient(90deg, #00d4ff, #ff007a); 
+                                   color: #fff; border: 1px solid #00d4ff;" required>
                     </div>
-                </section>
+                    <div class="mb-3">
+                        <label for="email" class="form-label" style="color: #fff;">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" 
+                            style="background: linear-gradient(90deg, #ff007a, #00d4ff); color: #fff;" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label" style="color: #fff;">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" 
+                            style="background: linear-gradient(90deg, #00d4ff, #ff007a); 
+                                   color: #fff; border: 1px solid #00d4ff;" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" id="button" class="btn" style=" padding: 10px 20px;  cursor: pointer;">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        
+
+                </div>
+             
                 
 
             </div>
