@@ -258,13 +258,112 @@ a{
             background-color: #f1f1f1;
             border-radius: 5px;
             margin: 10px 0;
+            overflow: hidden;
         }
+
+        
         .bar1{
             width: 100%;
             height: 100%;
             background-color: #00d4ff;
             border-radius: 5px;
+            /* overflow: hidden; */
+            animation: slide 3s ease-out forwards;
         }
+        @keyframes slide {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+
+        .bar2{
+            width: 90%;
+            height: 100%;
+            background-color: #00d4ff;
+            border-radius: 5px;
+            /* overflow: hidden; */
+            animation: slide1 3s ease-out forwards;
+        }
+        @keyframes slide1 {
+            0% {
+                width: 0%;
+            }
+            90% {
+                width: 90%;
+            }
+        }
+
+        .bar4{
+            width: 75%;
+            height: 100%;
+            background-color: #00d4ff;
+            border-radius: 5px;
+            /* overflow: hidden; */
+            animation: slide4 3s ease-out forwards;
+        }
+        @keyframes slide4 {
+            0% {
+                width: 0%;
+            }
+            75% {
+                width: 75%;
+            }
+        }
+
+        .bar3{
+            width: 70%;
+            height: 100%;
+            background-color: #00d4ff;
+            border-radius: 5px;
+            /* overflow: hidden; */
+            animation: slide3 3s ease-out forwards;
+        }
+        @keyframes slide3 {
+            0% {
+                width: 0%;
+            }
+            70% {
+                width: 70%;
+            }
+        }
+
+        .bar7{
+            width: 85%;
+            height: 100%;
+            background-color: #00d4ff;
+            border-radius: 5px;
+            /* overflow: hidden; */
+            animation: slide7 3s ease-out forwards;
+        }
+        @keyframes slide7 {
+            0% {
+                width: 0%;
+            }
+            85% {
+                width: 85%;
+            }
+        }
+
+        .bar8{
+            width: 60%;
+            height: 100%;
+            background-color: #00d4ff;
+            border-radius: 5px;
+            /* overflow: hidden; */
+            animation: slide8 3s ease-out forwards;
+        }
+        @keyframes slide8 {
+            0% {
+                width: 0%;
+            }
+            60% {
+                width: 60%;
+            }
+        }
+   
 
     
     @media (max-width: 884px) {
@@ -302,6 +401,62 @@ a{
             font-size: 1rem;
         }
     }
+    @media (max-width: 770px){
+        #projects1{
+            padding-top: 15%;
+            /* height: 500px; */
+
+        }
+        #projects{
+            height: 1600px;
+
+        }
+
+    }
+    @media (max-width: 770px){
+        #contact1{
+            padding-top: 25%;
+
+
+        }
+
+    }
+
+
+    @media (max-width: 520px){
+        #skill{
+            padding-top: 45%;
+
+
+        }
+
+    }
+
+    @media (max-width: 500px){
+        #skill{
+            padding-top: 5%;
+        }
+        #skill1{
+            height: 1200px;
+        }
+        #education{
+            padding-top: 5%;
+        }
+        #education1{
+            height: 1200px;
+        }
+        #aboutme{
+            padding-top: 15%;
+        }
+        #aboutme1{
+            height: 1400px;
+        }
+
+    }
+
+ 
+
+    
     </style>
 </head>
 
@@ -332,8 +487,8 @@ a{
     <section class="mt-5">
         <div id="home" class="main-container mb-5">
             <div class="home-img" data-aos="zoom-out" data-aos-duration="3000">
-                <img id="img1" src="/portfolio/static/images/WhatsApp Image 2025-01-24 at 1.11.21 PM.jpeg" alt="">
-                <!-- <img src="{{ url_for('static', filename='/images/oksss.jpg') }}" alt="Example Image"> -->
+                <!-- <img id="img1" src="/portfolio/static/images/WhatsApp Image 2025-01-24 at 1.11.21 PM.jpeg" alt=""> -->
+                <img id="img1" src="{{ url_for('static', filename='/images/WhatsApp Image 2025-01-24 at 1.11.21 PM.jpeg') }}">
 
             </div>
             <div class="content">
@@ -358,32 +513,47 @@ a{
         </div>
     </section>
 
-        <div>
-            <section class="mt-5">
-                <div id="aboutme" class="main2">
-                    <div class="container mb-5">
-                        <h1 id="about" class="mb-5 mt-3 text-center" data-aos="zoom-in" data-aos-duration="1500"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;About me</h1>
-
-                        <p class="text-white" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300"> Hi, I'm a passionate <strong>full-stack developer</strong> from <strong>Kerala, India</strong>, 
-                            with expertise in <strong>Python, Django, React</strong>, and <strong>Flask</strong>. I graduated 
-                            with a <strong>BCA</strong> from <strong>IHRD Nadapuram</strong> and have a strong foundation in 
-                            computer science principles. I specialize in creating dynamic, user-friendly websites and robust 
-                            web solutions tailored to meet specific client needs.</p>
-
-                        <p class="text-white" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300"> With a deep understanding of both frontend and backend development, I aim to deliver
-                            seamless user experiences while ensuring performance and scalability. Whether it's designing
-                            intuitive interfaces or crafting efficient server-side logic, I take pride in writing clean
-                            and maintainable code.</p>
-
-                        <p class="text-white" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">Beyond technical work, I enjoy learning about emerging technologies and constantly improving
-                            my skills to stay ahead in this fast-paced industry. I’m driven by a desire to build
-                            innovative solutions that make a difference.</p>
-
+    <div>
+        <section id="aboutme1" class="mt-5">
+            <div id="aboutme" class="main2">
+                <div class="container mb-5">
+                    <h1 id="about" class="mb-5 mt-3 text-center" data-aos="zoom-in" data-aos-duration="1500"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;About me</h1>
+    
+                    <!-- About Me Paragraphs -->
+                    <p class="text-white" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300"> Hi, I'm a passionate <strong>full-stack developer</strong> from <strong>Kerala, India</strong>, 
+                        with expertise in <strong>Python, Django, React</strong>, and <strong>Flask</strong>. I graduated 
+                        with a <strong>BCA</strong> from <strong>IHRD Nadapuram</strong> and have a strong foundation in 
+                        computer science principles. I specialize in creating dynamic, user-friendly websites and robust 
+                        web solutions tailored to meet specific client needs.</p>
+    
+                    <p class="text-white" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300"> With a deep understanding of both frontend and backend development, I aim to deliver
+                        seamless user experiences while ensuring performance and scalability. Whether it's designing
+                        intuitive interfaces or crafting efficient server-side logic, I take pride in writing clean
+                        and maintainable code.</p>
+    
+                    <p class="text-white" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">Beyond technical work, I enjoy learning about emerging technologies and constantly improving
+                        my skills to stay ahead in this fast-paced industry. I’m driven by a desire to build
+                        innovative solutions that make a difference.</p>
+    
+                    <!-- Personal Details Section -->
+                    <div id="personal-details" class="mt-5">
+                        <h2 class="text-center text-white mb-4" data-aos="zoom-in" data-aos-duration="1500">
+                            <i class="fa-solid fa-address-card"></i> &nbsp; Personal Details
+                        </h2>
+                                                <ul class="list-unstyled text-white" data-aos="fade-up" data-aos-duration="1500">
+                            <li><strong>Name:</strong> Agnaey viswanath</li>
+                            <li><strong>Email:</strong> agnaeyviswanath1234@gmail.com</li>
+                            <li><strong>Location:</strong>Kannur, Kerala, India</li>
+                            <li><strong>Phone:</strong> +91 8943819966</li>
+                            <!-- <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/johndoe" target="_blank" class="text-white">linkedin.com/in/johndoe</a></li> -->
+                        </ul>
                     </div>
                 </div>
-            </section>
-        </div>
-        <section>
+            </div>
+        </section>
+    </div>
+    
+        <section id="skill1">
             <div id="skill">
                 <div class="container">
                     <h1 id="about" class="mb-5 mt-3 text-center" data-aos="zoom-in" data-aos-duration="1500"><i class="fa-solid fa-computer"></i></i>&nbsp;&nbsp;Skills</h1>
@@ -405,7 +575,7 @@ a{
                                     <i>90%</i>
                                 </div>
                                 <div class="bar">
-                                    <div class="bar1" style="width: 90%;"></div>
+                                    <div class="bar2" style="width: 90%;"></div>
                                 </div>
                             </div>
                             <div class="item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
@@ -414,7 +584,7 @@ a{
                                     <i>75%</i>
                                 </div>
                                 <div class="bar">
-                                    <div class="bar1" style="width: 75%;"></div>
+                                    <div class="bar4" style="width: 75%;"></div>
                                 </div>
                             </div>
 
@@ -424,7 +594,7 @@ a{
                                     <i>70%</i>
                                 </div>
                                 <div class="bar">
-                                    <div class="bar1" style="width: 70%;"></div>
+                                    <div class="bar3" style="width: 70%;"></div>
                                 </div>
                             </div>
 
@@ -438,7 +608,7 @@ a{
                                     <i>70%</i>
                                 </div>
                                 <div class="bar">
-                                    <div class="bar1" style="width: 70%;"></div>
+                                    <div class="bar3" style="width: 70%;"></div>
                                 </div>
                             </div>
                             <div class="item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
@@ -447,7 +617,7 @@ a{
                                     <i>90%</i>
                                 </div>
                                 <div class="bar">
-                                    <div class="bar1" style="width: 90%;"></div>
+                                    <div class="bar2" style="width: 90%;"></div>
                                 </div>
                             </div>
                             <div class="item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
@@ -456,7 +626,7 @@ a{
                                     <i>85%</i>
                                 </div>
                                 <div class="bar">
-                                    <div class="bar1" style="width: 85%;"></div>
+                                    <div class="bar7" style="width: 85%;"></div>
                                 </div>
                             </div>
                             <div class="item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
@@ -465,7 +635,7 @@ a{
                                     <i>60%</i>
                                 </div>
                                 <div class="bar">
-                                    <div class="bar1" style="width: 60%;"></div>
+                                    <div class="bar8" style="width: 60%;"></div>
                                 </div>
                             </div>
                         </div>
@@ -475,7 +645,7 @@ a{
             </div>
         </section>
 
-        <section>
+        <section id="education1">
             <div id="education" class="container">
             <h1 id="about" class="text-center mb-4" data-aos="zoom-in" data-aos-duration="1500"><i class="fa-solid fa-user-graduate"></i>&nbsp;&nbsp;Education</h1>
             <div style="background: linear-gradient(90deg, #00d4ff, #ff007a); border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" 
@@ -506,9 +676,10 @@ a{
        </div>
        
         </div>
+        
         </section>
         <section id="projects" class="mt-5">
-            <div class="container" id="projects">
+            <div class="container" id="projects1">
                 <h1 id="about"  class="mb-5 mt-3 text-center" data-aos="zoom-in" data-aos-duration="1500">
                     <i class="fa-solid fa-briefcase"></i>&nbsp;&nbsp;Projects
                 </h1>
@@ -521,7 +692,44 @@ a{
                                 <h3 class="project-title">Flipkart E-Commerce Clone</h3>
                                 <p class="project-description mb-5">This project is a web application built with Django, designed to replicate the core features of the Flipkart e-commerce platform. The application allows users to browse products, add them to their cart, and make purchases. It also includes features such as product search,
                                      filtering by categories, user registration and login, order tracking, and payment integration.</p>
+                                     <div class="d-flex flex-wrap justify-content-center gap-3">
                                 <a href="https://github.com/agnaey/flipkart_django" class="" id="button" target="_blank"><i class="fa-brands fa-github gap-3"></i>View Project</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="project-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                            <!-- <img src="https://via.placeholder.com/350x200" alt="Project 1" class="project-image"> -->
+                            <div class="project-content">
+                                <h3 class="project-title">Torrent Zone</h3>
+                                <p class="project-description mb-5">"Torrent Zone" is a project designed to facilitate game downloads through torrents. It provides a platform where users can easily search for, download, and manage game files using torrent technology, streamlining the process of obtaining games. The system likely has a 
+                                    user-friendly interface to enhance the downloading experience</p>
+                                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                                <a href="https://github.com/agnaey/torrent_zone" class="" id="button" target="_blank"><i class="fa-brands fa-github gap-3"></i>View Project</a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="project-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                            <!-- <img src="https://via.placeholder.com/350x200" alt="Project 1" class="project-image"> -->
+                            <div class="project-content">
+                                <h3 class="project-title">Puma clone</h3>
+                                <p class="project-description mb-5">This project focuses on replicating the homepage layout and design of Puma’s official website. The homepage is built using HTML for structure, CSS for styling, and Bootstrap for responsiveness and grid layout. Key features include a clean and modern interface with product showcases, navigation bar,
+                                     promotional banners, and footer. Bootstrap ensures the page is mobile-friendly and adapts to various screen size.</p>
+                                     <div class="d-flex flex-wrap justify-content-center gap-3">
+                                        <a href="https://github.com/agnaey/puma" class="btn btn-primary" id="button" target="_blank">
+                                          <i class="fa-brands fa-github"></i> View Project
+                                        </a>
+                                        <a href="https://agnaey.github.io/puma/home.html" class="btn btn-secondary" id="button" target="_blank">
+                                          <i class="fa-solid fa-link"></i> Visit
+                                        </a>
+                                      </div>
+                                      
+
                             </div>
                         </div>
                     </div>
@@ -531,7 +739,7 @@ a{
         
 
         <section id="contact" style="background-color: #000; color: #fff; padding: 50px 0;">
-            <div class="container">
+            <div class="container" id="contact1">
                 <h1 id="about" class="text-center mb-5" data-aos="zoom-in" data-aos-duration="1500">
                     <i class="fa-solid fa-headset"></i>&nbsp;&nbsp;Contact Me
                 </h1>
