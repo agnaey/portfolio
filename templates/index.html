@@ -386,7 +386,7 @@ a{
 
         }
         #projects{
-            height: 1600px;
+            height: 2000px;
 
         }
 
@@ -431,7 +431,9 @@ a{
         }
 
     }
-
+.project-image{
+    border-radius: 10px;
+}
  
 
     
@@ -665,9 +667,9 @@ a{
 
                     <div class="col-md-4 mb-4">
                         <div class="project-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
-                            <!-- <img src="https://via.placeholder.com/350x200" alt="Project 1" class="project-image"> -->
+                            <img src="{{ url_for('static', filename='/images/project1.png') }}" alt="Project 1" class="project-image img-fluid">
                             <div class="project-content">
-                                <h3 class="project-title">Flipkart E-Commerce Clone</h3>
+                                <h3 class="project-title text-center mt-3">Flipkart E-Commerce Clone</h3>
                                 <p class="project-description mb-5">This project is a web application built with Django, designed to replicate the core features of the Flipkart e-commerce platform. The application allows users to browse products, add them to their cart, and make purchases. It also includes features such as product search,
                                      filtering by categories, user registration and login, order tracking, and payment integration.</p>
                                      <div class="d-flex flex-wrap justify-content-center gap-3">
@@ -679,23 +681,25 @@ a{
 
                     <div class="col-md-4 mb-4">
                         <div class="project-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
-                            <!-- <img src="https://via.placeholder.com/350x200" alt="Project 1" class="project-image"> -->
+                            <img src="{{ url_for('static', filename='/images/project2.png') }}" alt="Project 1" class="project-image img-fluid">
                             <div class="project-content">
-                                <h3 class="project-title">Torrent Zone</h3>
-                                <p class="project-description mb-5">"Torrent Zone" is a project designed to facilitate game downloads through torrents. It provides a platform where users can easily search for, download, and manage game files using torrent technology, streamlining the process of obtaining games. The system likely has a 
-                                    user-friendly interface to enhance the downloading experience</p>
+                                <h3 class="project-title text-center mt-3">bookmyshow</h3>
+                                <p class="project-description mb-5">BookMyShow is a dynamic and user-friendly event booking website created using HTML, CSS, and Bootstrap. It allows users to browse and book tickets for movies, concerts, plays, and other events effortlessly. The design features a modern, responsive layout with intuitive navigation, ensuring seamless usability across devices.</p>
                                     <div class="d-flex flex-wrap justify-content-center gap-3">
-                                <a href="https://github.com/agnaey/torrent_zone" class="" id="button" target="_blank"><i class="fa-brands fa-github gap-3"></i>View Project</a>
-                            </div>
+
+                                <a href="https://github.com/agnaey/bookmyshow" class="" id="button" target="_blank"><i class="fa-brands fa-github gap-3"></i>View Project</a>
+                                <a href="https://agnaey.github.io/bookmyshow/intex.html" class="btn btn-secondary" id="button" target="_blank">
+                                    <i class="fa-solid fa-link"></i> Visit Site</a>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-4 mb-4">
                         <div class="project-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
-                            <!-- <img src="https://via.placeholder.com/350x200" alt="Project 1" class="project-image"> -->
+                            <img src="{{ url_for('static', filename='/images/project3.png') }}" alt="Project 1" class="project-image img-fluid">
                             <div class="project-content">
-                                <h3 class="project-title">Puma clone</h3>
+                                <h3 class="project-title text-center mt-3">Puma clone</h3>
                                 <p class="project-description mb-5">This project focuses on replicating the homepage layout and design of Puma’s official website. The homepage is built using HTML for structure, CSS for styling, and Bootstrap for responsiveness and grid layout. Key features include a clean and modern interface with product showcases, navigation bar,
                                      promotional banners, and footer. Bootstrap ensures the page is mobile-friendly and adapts to various screen size.</p>
                                      <div class="d-flex flex-wrap justify-content-center gap-3">
